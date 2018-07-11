@@ -810,7 +810,7 @@ var ReviewPageComponent = /** @class */ (function () {
         this.email = '';
         this.total_cost = 0;
         this.original_cost = 0;
-        this.new_cost = 0;
+        this.new_cost = 155;
         this.cost_diff = 0;
         this.button_disabled = false;
     }
@@ -880,7 +880,7 @@ var ReviewPageComponent = /** @class */ (function () {
                         else {
                             console.log('Success!');
                             // ...send the token to the your backend to process the charge
-                            if (this.new_cost = 0) {
+                            if (this.new_cost == 0) {
                                 this.postToGoogle();
                             }
                             else {
