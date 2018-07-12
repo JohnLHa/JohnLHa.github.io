@@ -916,6 +916,9 @@ var ReviewPageComponent = /** @class */ (function () {
         var _this = this;
         console.log("posting to google: ", this.registers);
         this.loading = true;
+        if (this.new_cost == 0) {
+            this.new_cost = 1;
+        }
         for (var i in this.registers) {
             this.registers[i].cost = this.new_cost;
         }
@@ -943,9 +946,9 @@ var ReviewPageComponent = /** @class */ (function () {
                 _this.cost_diff = _this.original_cost - _this.total_cost;
             }, function (error) { return reject(error); });
         });
-        if (this.new_cost = 0) {
-            this.button_disabled = false;
-        }
+        // if(this.new_cost = 0){
+        //   this.button_disabled = false;
+        // }
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('cardInfo'),
